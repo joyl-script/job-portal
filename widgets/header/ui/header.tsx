@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Nav from "./nav"
-import Active from "./active"
+import Nav from "./Nav"
+import Active from "./Active"
 
 export default function Header() {
   return (
