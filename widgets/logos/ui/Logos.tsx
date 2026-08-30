@@ -12,16 +12,14 @@ export default function Logos() {
 
   return (
     <section className="bg-black py-10">
-      <div className="container flex justify-between">
+      <div className="container flex md:justify-between gap-10 md:gap-0 overflow-x-hidden md:overflow-visible">
         {logos.map((logo) => (
-          <a href="#">
+          <a key={logo.src} href="#" className="shrink-0">
             <Image
-              key={logo.src}
               src={logo.src}
               alt={logo.name}
               width={logo.width}
               height={logo.height}
-
             />
           </a>
         ))}

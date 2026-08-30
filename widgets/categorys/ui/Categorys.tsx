@@ -15,10 +15,10 @@ export default function Categorys() {
 
   return (
 
-    <section className="bg-[#309689]/10 pt-15 pb-30">
+    <section className="bg-[#309689]/10 md:pt-15 pt-10 pb-30">
       <div className="container text-center">
         <div>
-          <h1 className="text-5xl font-bold text-black">Browse by Category</h1>
+          <h1 className="md:text-5xl text-3xl font-bold text-black">Browse by Category</h1>
           <p className="text-black mt-6">At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id scelerisque rhoncus. </p>
         </div>
         <div>
