@@ -1,7 +1,10 @@
 'use client'
 
+import { openLogin, openRegister } from "@/store/store/authSlice";
+import { AppDispatch } from "@/store/store/store";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useDispatch } from "react-redux";
 
 const navLinks = [
   { label: 'Home', href: '/home' },
@@ -12,13 +15,13 @@ const navLinks = [
 
 export default function Active() {
   const [isOpen, setIsOpen] = useState(false);
-
   const close = () => setIsOpen(false);
+  const dispatch = useDispatch<AppDispatch>()
 
   return (
     <div className="relative flex gap-5 items-center">
-      <button className="text-white cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out">Login</button>
-      <button className="bg-[#309689] py-3.5 px-5 rounded-[8px] cursor-pointer text-white hover:bg-[#3cb1a2] hover:scale-105 transition duration-300 ease-in-out">Register</button>
+      <button onClick={() => dispatch(openLogin())} className="text-white cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out">Login</button>
+      <button onClick={() => dispatch(openRegister())} className="bg-[#309689] py-3.5 px-5 rounded-[8px] cursor-pointer text-white hover:bg-[#3cb1a2] hover:scale-105 transition duration-300 ease-in-out">Register</button>
 
 
       <button

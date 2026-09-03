@@ -1,3 +1,4 @@
+import AuthModal from "@/widgets/auth/ui/AuthForm";
 import Categorys from "@/widgets/categorys/ui/Categorys";
 import Footer from "@/widgets/footer/ui/Footer";
 import Header from "@/widgets/header/ui/Header";
@@ -14,6 +15,7 @@ export default function Home() {
       <Vacancy />
       <Categorys />
       <Footer />
+      <AuthModal />
     </div>
   );
 }
