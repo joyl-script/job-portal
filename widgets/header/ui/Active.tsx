@@ -23,7 +23,6 @@ export default function Active() {
       <button onClick={() => dispatch(openLogin())} className="text-white cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out">Login</button>
       <button onClick={() => dispatch(openRegister())} className="bg-[#309689] py-3.5 px-5 rounded-[8px] cursor-pointer text-white hover:bg-[#3cb1a2] hover:scale-105 transition duration-300 ease-in-out">Register</button>
 
-
       <button
         className="flex sm:hidden"
         onClick={() => setIsOpen(!isOpen)}
@@ -48,8 +47,7 @@ export default function Active() {
             ))}
           </ul>
         </nav>
-
       )}
-    </div >
+    </div>
   );
 }
