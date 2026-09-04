@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import ReduxProvider from "@/store/store/provider";
+import ReduxProvider from "@/store/provider";
 
 const figtree = Figtree({
   variable: "--font-figtree",

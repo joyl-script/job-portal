@@ -1,9 +1,9 @@
-'use client'
+﻿'use client'
 
-import { AppDispatch, RootState } from "@/store/store/store"
+import { AppDispatch, RootState } from "@/store/store"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { closeModal, login } from "@/store/store/authSlice"
+import { closeModal, login } from "@/features/auth/model/authSlice"
 
 export default function AuthModal() {
 

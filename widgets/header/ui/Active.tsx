@@ -1,7 +1,7 @@
-'use client'
+﻿'use client'
 
-import { openLogin, openRegister } from "@/store/store/authSlice";
-import { AppDispatch } from "@/store/store/store";
+import { openLogin, openRegister } from "@/features/auth/model/authSlice";
+import { AppDispatch } from "@/store/store";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch } from "react-redux";
@@ -26,7 +26,7 @@ export default function Active() {
       <button
         className="flex sm:hidden"
         onClick={() => setIsOpen(!isOpen)}
-        aria-label="Меню"
+        aria-label="РњРµРЅСЋ"
       >
         <RxHamburgerMenu color="white" size={30} className="cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out" />
       </button>

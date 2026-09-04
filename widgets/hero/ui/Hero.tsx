@@ -1,4 +1,4 @@
-import Filters from "./Filters";
+﻿import Filters from "@/features/search-jobs/ui/Filters";
 import Statistic from "./Statistic";
 
 export default function Hero() {
