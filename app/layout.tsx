@@ -2,6 +2,7 @@
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/store/provider";
+import QueryProvider from "@/store/queryProvider";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -21,9 +22,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${figtree.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ReduxProvider>
-          {children}
-        </ReduxProvider>
+        <QueryProvider>
+          <ReduxProvider>
+            {children}
+          </ReduxProvider>
+        </QueryProvider>
       </body>
     </html>
   );
