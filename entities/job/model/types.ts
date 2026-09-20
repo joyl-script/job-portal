@@ -5,5 +5,6 @@ export interface Job {
   logo: string;
   createdAt: string;
   category: string;
+  industry: string[];
   url: string;
 }

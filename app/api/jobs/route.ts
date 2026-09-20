@@ -1,8 +1,14 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    const res = await fetch("https://jobicy.com/api/v2/remote-jobs?count=10&tag=frontend");
+    const { searchParams } = new URL(req.url);
+    const count = searchParams.get("count") ?? "10";
+    const tag = searchParams.get("tag");
+    const params = new URLSearchParams({ count });
+    if (tag) params.set("tag", tag);
+
+    const res = await fetch(`https://jobicy.com/api/v2/remote-jobs?${params.toString()}`);
 
     if (!res.ok) {
       return NextResponse.json({ error: "Failed to fetch jobs" }, { status: res.status });

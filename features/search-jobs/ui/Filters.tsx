@@ -2,14 +2,25 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import {
+  setQuery as setQueryFilter,
+  setLocation as setLocationFilter,
+  setCategory as setCategoryFilter,
+} from "@/features/search-jobs/model/filtersSlice";
 
 export default function Filters() {
+  const dispatch = useDispatch();
+
+
   const [query, setQuery] = useState("");
   const [location, setLocation] = useState("");
   const [category, setCategory] = useState("");
 
-  const HandleClick = () => {
-    console.log({ query, location, category });
+  const handleSearch = () => {
+    dispatch(setQueryFilter(query));
+    dispatch(setLocationFilter(location));
+    dispatch(setCategoryFilter(category));
   };
 
   const locations = ["Riga", "Vilnius", "Tallinn", "Remote"];
@@ -36,9 +47,7 @@ export default function Filters() {
         >
           <option value="">Select Location</option>
           {locations.map((loc) => (
-            <option key={loc} value={loc}>
-              {loc}
-            </option>
+            <option key={loc} value={loc}>{loc}</option>
           ))}
         </select>
       </div>
@@ -53,15 +62,13 @@ export default function Filters() {
         >
           <option value="">Select Category</option>
           {categories.map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
+            <option key={cat} value={cat}>{cat}</option>
           ))}
         </select>
       </div>
 
       <button
-        onClick={HandleClick}
+        onClick={handleSearch}
         className="cursor-pointer md:ml-auto flex items-center justify-center gap-2 bg-[#309689] hover:bg-[#267a6f] transition-colors rounded-full text-white px-6 py-4 shrink-0 mt-3 md:mt-0"
       >
         <Image src="/search.svg" alt="search" width={16} height={16} />
@@ -69,8 +76,4 @@ export default function Filters() {
       </button>
     </div>
   );
-
 }
-
-
-

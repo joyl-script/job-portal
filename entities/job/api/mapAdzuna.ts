@@ -9,6 +9,7 @@ interface JobicyRaw {
   url: string;
   pubDate: string;
   jobDescription?: string;
+  jobIndustry?: string[];
 }
 
 const FALLBACK_LOGO =
@@ -22,6 +23,7 @@ export function mapJobicyJob(raw: JobicyRaw): Job {
     logo: raw.companyLogo || FALLBACK_LOGO,
     createdAt: raw.pubDate,
     category: raw.jobGeo ?? "",
+    industry: raw.jobIndustry ?? [],
     url: raw.url,
   };
 }

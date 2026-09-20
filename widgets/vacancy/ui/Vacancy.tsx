@@ -1,10 +1,13 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
+import { useSelector } from "react-redux";
 import { jobsQueryOptions } from "@/entities/job/api/getJobs";
+import type { RootState } from "@/store/store";
 
 export default function Vacancy() {
-  const { data: jobs, isLoading, isError } = useQuery(jobsQueryOptions());
+  const filters = useSelector((s: RootState) => s.filters);
+  const { data: jobs, isLoading, isError } = useQuery(jobsQueryOptions(filters));
 
   return (
     <section className="py-15">
