@@ -1,19 +1,36 @@
-export default function Nav() {
+"use client";
 
-  const navLinks = [
-    { label: 'Home', href: '/home' },
-    { label: 'Jobs', href: '/jobs' },
-    { label: 'About Us', href: '/about' },
-    { label: 'Contact Us', href: '/contact' },
-  ]
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Jobs", href: "/jobs" },
+];
+
+export default function Nav() {
+  const pathname = usePathname();
 
   return (
     <nav>
       <ul className="hidden md:flex gap-8">
-        {navLinks.map((link) => (
-          <li key={link.href}><a className="text-white opacity-[0.6] hover:opacity-100 transition-opacity duration-300 ease-in-out" href={link.href}>{link.label}</a></li>
-        ))}
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className={`transition-opacity duration-300 ease-in-out ${isActive
+                    ? "text-white opacity-100"
+                    : "text-white opacity-60 hover:opacity-100"
+                  }`}
+              >
+                {link.label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
-  )
+  );
 }

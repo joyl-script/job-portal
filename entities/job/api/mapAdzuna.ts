@@ -10,6 +10,9 @@ interface JobicyRaw {
   pubDate: string;
   jobDescription?: string;
   jobIndustry?: string[];
+  jobType?: string;
+  salary_min?: number;
+  salary_max?: number;
 }
 
 const FALLBACK_LOGO =
@@ -22,8 +25,11 @@ export function mapJobicyJob(raw: JobicyRaw): Job {
     company: raw.companyName ?? "Unknown",
     logo: raw.companyLogo || FALLBACK_LOGO,
     createdAt: raw.pubDate,
-    category: raw.jobGeo ?? "",
+    location: raw.jobGeo ?? "",
     industry: raw.jobIndustry ?? [],
     url: raw.url,
+    salaryMin: raw.salary_min,
+    salaryMax: raw.salary_max,
+    jobType: raw.jobType,
   };
 }

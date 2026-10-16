@@ -29,3 +29,54 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.caret {
+  color: #309689;
+  font-weight: 400;
+  margin-left: 2px;
+  animation: caret-blink 1s step-end infinite;
+}
+
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.tilt-card > *:first-child {
+  border-radius: 1.5rem;
+}
+
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+

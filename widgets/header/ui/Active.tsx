@@ -5,9 +5,10 @@ import { AppDispatch } from "@/store/store";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch } from "react-redux";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: 'Home', href: '/home' },
+  { label: 'Home', href: '/' },
   { label: 'Jobs', href: '/jobs' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact Us', href: '/contact' },
@@ -17,6 +18,7 @@ export default function Active() {
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
   const dispatch = useDispatch<AppDispatch>()
+  const pathname = usePathname();
 
   return (
     <div className="relative flex gap-5 items-center">
@@ -39,7 +41,11 @@ export default function Active() {
                 <a
                   href={link.href}
                   onClick={close}
-                  className="block py-3 text-white text-lg hover:text-[#309689] transition-colors duration-300 border-b border-white/10"
+                  className={`block py-3 text-lg transition-colors duration-300 border-b border-white/10 ${
+                    pathname === link.href
+                      ? "text-white"
+                      : "text-white opacity-60 hover:text-[#309689] hover:opacity-100"
+                  }`}
                 >
                   {link.label}
                 </a>

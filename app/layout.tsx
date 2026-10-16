@@ -3,6 +3,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "@/store/provider";
 import QueryProvider from "@/store/queryProvider";
+import SmoothScroll from "@/widgets/smooth-scroll/ui/SmoothScroll";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <QueryProvider>
           <ReduxProvider>
+            <SmoothScroll />
             {children}
           </ReduxProvider>
         </QueryProvider>

@@ -4,7 +4,10 @@ export interface Job {
   company: string;
   logo: string;
   createdAt: string;
-  category: string;
+  location: string;
   industry: string[];
   url: string;
+  salaryMin?: number;
+  salaryMax?: number;
+  jobType?: string;
 }
