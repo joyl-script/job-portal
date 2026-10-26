@@ -51,14 +51,6 @@ export default function Footer() {
             <p className="text-white/80 text-sm mb-4">
               Eu nunc pretium vitae platea. Non netus elementum vulputate
             </p>
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/40 mb-3 focus:outline-none focus:border-[#309689]"
-            />
-            <button className="w-full bg-[#309689] text-white font-bold py-3 rounded-2xl hover:bg-[#267a6f] transition-colors cursor-pointer">
-              Subscribe now
-            </button>
           </div>
         </div>
 

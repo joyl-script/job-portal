@@ -126,7 +126,7 @@ function deriveFacets(jobs: Job[], field: "location" | "industry" | "jobType") {
 export function jobCategoriesQueryOptions() {
   return {
     ...jobsBaseQueryOptions,
-    select: (jobs: Job[]) => deriveFacets(jobs, "industry").slice(0, 12),
+    select: (jobs: Job[]) => deriveFacets(jobs, "industry").slice(0, 9),
   };
 }
 

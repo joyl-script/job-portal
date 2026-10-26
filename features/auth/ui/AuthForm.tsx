@@ -25,15 +25,15 @@ export default function AuthModal() {
   return (
     <div
       onClick={() => dispatch(closeModal())}
-      className="fixed inset-0 z-10 bg-black/50  flex items-center justify-center">
-      <form className="bg-[#EBF5F4] py-10 px-15 rounded-[20px]"
+      className="fixed inset-0 z-[100] bg-black/50  flex items-center justify-center px-4">
+      <form className="bg-[#EBF5F4] py-10 px-6 sm:px-15 rounded-[20px] w-full max-w-[440px]"
         onSubmit={handleSubmit}
         onClick={(e) => e.stopPropagation()}
       >
         <h1 className="text-3xl font-bold text-center">{isLogin ? 'Login' : 'Register'}</h1>
         <div className="block mt-5">
           <label className="font-semibold" htmlFor="">Email</label>
-          <input type="text"
+          <input type="email"
             className="p-2 w-full outline-none bg-white rounded-lg"
             placeholder="Email"
             value={email}
@@ -42,7 +42,7 @@ export default function AuthModal() {
         </div>
         <div className="block mt-5">
           <label className="font-semibold" htmlFor="">Password</label>
-          <input type="text"
+          <input type="password"
             className="p-2 w-full outline-none bg-white rounded-lg"
             placeholder="Password"
             value={password}

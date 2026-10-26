@@ -21,7 +21,7 @@ export const login = createAsyncThunk(
   'auth/login',
   async ({ email, password }: { email: string, password: string }) => {
     await new Promise((res) => setTimeout(res, 1000))
-    if (email === 'test@test.com' && password === 'password') {
+    if (email === 'majpotejto@gmail.com' && password === 'pekochka_69') {
       return { email }
     }
     throw new Error('Неверные email или пароль')

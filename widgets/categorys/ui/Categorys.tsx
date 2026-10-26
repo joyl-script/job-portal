@@ -15,9 +15,9 @@ export default function Categorys() {
           <p className="text-black mt-6">At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id scelerisque rhoncus. </p>
         </div>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center mt-15">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mt-15">
             {isLoading &&
-              [0, 1, 2, 3].map((i) => (
+              [0, 1, 2, 3, 4, 5].map((i) => (
                 <div
                   key={i}
                   className="bg-white p-12 rounded-[20px] flex flex-col items-center gap-8 animate-pulse"

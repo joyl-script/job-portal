@@ -12,7 +12,7 @@ export default function Logos() {
 
   return (
     <section className="bg-black py-10">
-      <div className="container flex md:justify-between gap-10 md:gap-0 overflow-x-hidden md:overflow-visible">
+      <div className="container flex flex-wrap justify-center md:justify-between gap-10 md:gap-0">
         {logos.map((logo) => (
           <a key={logo.src} href="#" className="shrink-0">
             <Image

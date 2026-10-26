@@ -11,15 +11,16 @@ type vacancyType = {
   title?: string
   desc?: string
   button?: string
+  noContainer?: boolean
 }
 
-export default function Vacancy({ title, desc, button }: vacancyType) {
+export default function Vacancy({ title, desc, button, noContainer }: vacancyType) {
   const filters = useSelector((s: RootState) => s.filters);
   const { data: jobs, isLoading, isError } = useQuery(jobsQueryOptions(filters));
 
   return (
     <section className="py-15">
-      <div className="container">
+      <div className={noContainer ? "" : "container"}>
         <div>
           <h1 className="text-black md:text-5xl text-3xl font-bold text-center md:text-left">{title}</h1>
           <div className="flex justify-between items-baseline">

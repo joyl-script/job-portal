@@ -1,6 +1,6 @@
 ﻿import Parallax from "./Parallax";
 import Statistic from "./Statistic";
-import Typewriter from "./Typewriter";
+import { Typewriter } from "./Typewriter";
 
 export default function Hero() {
   return (
