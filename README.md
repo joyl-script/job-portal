@@ -28,7 +28,7 @@
 
 ## 📸 Скриншоты
 
-<<<<<<< HEAD
+HEAD
 Главная страница
 
 <!-- добавь скриншоты в папку screenshots/ и раскомментируй:
@@ -36,9 +36,9 @@
 Страница вакансий
 ![Страница вакансий](./screenshots/jobs.png)
 -->
-=======
+
 ![Главная страница](./screenshots/home.png)
->>>>>>> 2bbea37c0746cd4c722c744304e6d7d9b4f8b62f
+ 2bbea37c0746cd4c722c744304e6d7d9b4f8b62f
 
 ## 🚀 Запуск локально
 
@@ -47,8 +47,7 @@ git clone https://github.com/joyl-script/job-portal.git
 cd job-portal
 npm install
 npm run dev
-<<<<<<< HEAD
+ HEAD
 ```
 Открой [http://localhost:3000](http://localhost:3000) в браузере.
-=======
->>>>>>> 2bbea37c0746cd4c722c744304e6d7d9b4f8b62f
+2bbea37c0746cd4c722c744304e6d7d9b4f8b62f
