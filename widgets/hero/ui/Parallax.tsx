@@ -26,7 +26,7 @@ export default function Parallax() {
     <div
       ref={ref}
       aria-hidden="true"
-      className="absolute inset-0 -bottom-24 bg-center bg-cover will-change-transform scale-110"
+      className="absolute inset-0 -bottom-60 bg-center bg-cover will-change-transform scale-110"
       style={{
         backgroundImage: "url('/Account-for-Workforce-Transitions-while-Diversifying-Workplaces.jpg')",
       }}

@@ -12,7 +12,7 @@ export default function Categorys() {
       <div className="container text-center">
         <div>
           <h1 className="md:text-5xl text-3xl font-bold text-black">Browse by Category</h1>
-          <p className="text-black mt-6">At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id scelerisque rhoncus. </p>
+          <p className="text-black mt-6">Browse openings by field. Each category shows how many roles are open right now.</p>
         </div>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mt-15">

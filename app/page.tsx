@@ -3,7 +3,6 @@ import Categorys from "@/widgets/categorys/ui/Categorys";
 import Footer from "@/widgets/footer/ui/Footer";
 import Header from "@/widgets/header/ui/Header";
 import Hero from "@/widgets/hero/ui/Hero";
-import Logos from "@/widgets/logos/ui/Logos";
 import Reveal from "@/widgets/scroll-reveal/ui/Reveal";
 import Vacancy from "@/widgets/vacancy/ui/Vacancy";
 
@@ -12,13 +11,10 @@ export default function Home() {
     <div>
       <Header />
       <Hero />
-      <Reveal>
-        <Logos />
-      </Reveal>
       <Reveal delay={100}>
         <Vacancy
-          title="Recent Jobs Available"
-          desc="At eu lobortis pretium tincidunt amet lacus ut aenean aliquet"
+          title="Latest remote jobs"
+          desc="Listings come from the Jobicy job feed and are refreshed every few hours. Apply on the employer's site — every posting links to the original."
           button="View all"
         />
       </Reveal>
