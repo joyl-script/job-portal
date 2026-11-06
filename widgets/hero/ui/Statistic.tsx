@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const sections = [
-  { image: '/briefcase(2) 2.svg', number: 25850, name: 'Jobs' },
-  { image: '/g2079.svg', number: 10250, name: 'Candidates' },
-  { image: '/building 1.svg', number: 18400, name: 'Companies' },
+  { image: '/job-portal/briefcase(2) 2.svg', number: 25850, name: 'Jobs' },
+  { image: '/job-portal/g2079.svg', number: 10250, name: 'Candidates' },
+  { image: '/job-portal/building 1.svg', number: 18400, name: 'Companies' },
 ]
 
 function CountUp({ to, duration = 1500 }: { to: number; duration?: number }) {

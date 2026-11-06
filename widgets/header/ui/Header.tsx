@@ -8,7 +8,7 @@ export default function Header({ hideAuth }: { hideAuth?: boolean }) {
       <div className="container flex justify-between items-center">
         <a href="/job-portal/" className="flex gap-2.5">
           <Image
-            src={'/job.svg'}
+            src={'/job-portal/job.svg'}
             alt='logo'
             width={28}
             height={28}

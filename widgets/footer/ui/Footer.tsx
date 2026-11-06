@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-10">
               <Image
-                src={'/job.svg'}
+                src={'/job-portal/job.svg'}
                 alt='logo'
                 width={28}
                 height={28}

@@ -38,7 +38,7 @@ export default function Categorys() {
                 className="bg-white p-12 rounded-[20px] flex flex-col items-center gap-8 border-2 border-transparent hover:border-[#309689] hover:scale-103 transition-all duration-300 ease-in-out"
               >
                 <Image
-                  src="/g2898.svg"
+                  src="/job-portal/g2898.svg"
                   alt={category.name}
                   width={40}
                   height={40}

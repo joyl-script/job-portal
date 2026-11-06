@@ -88,7 +88,7 @@ export default function FilterSidebar() {
 
       <p className="font-semibold text-black mb-2">Search by Job Title</p>
       <div className="flex items-center gap-2 bg-white rounded-xl px-4 py-3 mb-6">
-        <Image src="/search.svg" alt="search" width={16} height={16} />
+        <Image src="/job-portal/search.svg" alt="search" width={16} height={16} />
         <input
           type="text"
           value={query}
@@ -102,7 +102,7 @@ export default function FilterSidebar() {
 
       <p className="font-semibold text-black mb-2">Location</p>
       <div className="flex items-center gap-2 bg-white rounded-xl px-4 py-3 mb-6">
-        <Image src="/map-pin.svg" alt="location" width={16} height={16} />
+        <Image src="/job-portal/map-pin.svg" alt="location" width={16} height={16} />
         <select
           value={filters.location}
           onChange={(e) => dispatch(setLocationFilter(e.target.value))}
