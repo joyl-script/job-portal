@@ -18,10 +18,11 @@ async function fetchJobs(count: string, tag?: string): Promise<Job[]> {
   const params = new URLSearchParams({ count });
   if (tag) params.set("tag", tag);
 
-  const res = await fetch(`/api/jobs?${params.toString()}`);
+  const res = await fetch(`https://jobicy.com/api/v2/remote-jobs?${params.toString()}`);
   if (!res.ok) throw new Error("Failed to fetch jobs");
   const raw = await res.json();
-  return raw.map(mapJobicyJob);
+  const jobs = Array.isArray(raw) ? raw : (raw.jobs ?? []);
+  return jobs.map(mapJobicyJob);
 }
 
 

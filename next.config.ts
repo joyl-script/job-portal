@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  basePath: "/job-portal",
+  trailingSlash: true,
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
