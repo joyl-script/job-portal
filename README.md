@@ -4,7 +4,7 @@
 
 ## 🌐 Демо
 
-👉 https://job-portal-five-lemon.vercel.app/
+👉 https://joyl-script.github.io/job-portal/
 
 ## 🛠 Технологии
 
